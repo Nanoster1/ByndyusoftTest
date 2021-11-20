@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByndyusoftTest", "ByndyusoftTest\ByndyusoftTest.csproj", "{8F89AB61-CE96-4EB5-A276-5E803540EE53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{14D8BDD5-0629-4B59-92DB-22A15C7D8196}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F89AB61-CE96-4EB5-A276-5E803540EE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F89AB61-CE96-4EB5-A276-5E803540EE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F89AB61-CE96-4EB5-A276-5E803540EE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F89AB61-CE96-4EB5-A276-5E803540EE53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
