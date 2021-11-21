@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,7 +7,7 @@ namespace ByndyusoftTest
 {
     public static class TestFunctions
     {
-        public static Task<double> SumTwoMinAsync<T>(this IEnumerable<T> enumerable, [NotNull] Func<T, double> selector)
+        public static Task<double> SumTwoMinAsync<T>(this IEnumerable<T> enumerable, Func<T, double> selector)
         {
             return Task.Run(() => enumerable.SumTwoMin(selector));
         }
