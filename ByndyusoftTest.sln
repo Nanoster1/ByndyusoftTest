@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByndyusoftTest", "Byndyusof
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{14D8BDD5-0629-4B59-92DB-22A15C7D8196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTests", "NUnitTests\NUnitTests.csproj", "{DBFE51FE-CDAC-42AA-B85E-2187270DE588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14D8BDD5-0629-4B59-92DB-22A15C7D8196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFE51FE-CDAC-42AA-B85E-2187270DE588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFE51FE-CDAC-42AA-B85E-2187270DE588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFE51FE-CDAC-42AA-B85E-2187270DE588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFE51FE-CDAC-42AA-B85E-2187270DE588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,22 +1,34 @@
 using System;
 using ByndyusoftTest;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace Tests
+namespace NUnitTests
 {
-    [TestClass]
-    public class TestFunctionsTest
+    public class TestFunctionsTests
     {
-        [TestMethod]
+        private double[] _inputArr;
+        private double[] _emptyInputArr;
+        private double[] _defaultArr;
+        private double[] _oneNumArr;
+        
+        [SetUp]
+        public void Setup()
+        {
+            _inputArr = new [] {4, 3, 3, 19, 492, 1, -10, 10.5, 12.56, -5};
+            _emptyInputArr = Array.Empty<double>();
+            _defaultArr = new double[15];
+            _oneNumArr = new double[] {15.0};
+        }
+
+        [Test]
         public void ArrayTest1()
         {
-            var inputArr = new double[] {4, 3, 3, 19, 492, 1, -10, 10.5, 12.56, -5};
             var expectedResult = -15;
-            var result = TestFunctions.SumTwoMin(inputArr);
+            var result = TestFunctions.SumTwoMin(_inputArr);
             Assert.AreEqual(expectedResult, result);
         }
         
-        [TestMethod]
+        [Test]
         public void ArrayTest2()
         {
             try
@@ -30,21 +42,20 @@ namespace Tests
             Assert.Fail();
         }
         
-        [TestMethod]
+        [Test]
         public void ArrayTest3()
         {
-            var inputArr = new double[15];
-            var result = TestFunctions.SumTwoMin(inputArr);
-            var expectedResult = 0d;
+            var result = TestFunctions.SumTwoMin(_defaultArr);
+            var expectedResult = _defaultArr[0];
             Assert.AreEqual(expectedResult, result);
         }
         
-        [TestMethod]
+        [Test]
         public void ArrayTest4()
         {
             try
             {
-                var inputArr = new double[0]; 
+                var inputArr = _emptyInputArr; 
                 var result = TestFunctions.SumTwoMin(inputArr);
             }
             catch (InvalidOperationException)
@@ -54,31 +65,29 @@ namespace Tests
             Assert.Fail();
         }
         
-        [TestMethod]
+        [Test]
         public void ArrayTest5()
         {
-            var inputArr = new double[] {15.5};
-            var result = TestFunctions.SumTwoMin(inputArr);
-            var expectedResult = 15.5;
+            var result = TestFunctions.SumTwoMin(_oneNumArr);
+            var expectedResult = _oneNumArr[0];
             Assert.AreEqual(expectedResult, result);
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest1()
         {
-            var inputArr = new double[] {4, 3, 3, 19, 492, 1, -10, 10.5, 12.56, -5};
+            var inputArr = _inputArr;
             var result = inputArr.SumTwoMin(x => x);
             var expectedResult = -15;
             Assert.AreEqual(expectedResult, result);
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest2()
         {
             try
             {
-                var inputArr = new double[] {4, 3, 3, 19, 492, 1, -10};
-                var result = inputArr.SumTwoMin(null);
+                var result = _inputArr.SumTwoMin(null);
             }
             catch (ArgumentNullException)
             {
@@ -87,16 +96,15 @@ namespace Tests
             Assert.Fail();
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest3()
         {
-            var inputArr = new double[15];
-            var result = inputArr.SumTwoMin(x => x);
-            var expectedResult = 0d;
+            var result = _defaultArr.SumTwoMin(x => x);
+            var expectedResult = _defaultArr[0];
             Assert.AreEqual(expectedResult, result);
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest4()
         {
             try
@@ -112,13 +120,12 @@ namespace Tests
             Assert.Fail();
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest5()
         {
             try
             {
-                var inputArr = new double[0];
-                var result = inputArr.SumTwoMin(x => x);
+                var result = _emptyInputArr.SumTwoMin(x => x);
             }
             catch (InvalidOperationException)
             {
@@ -128,12 +135,11 @@ namespace Tests
             Assert.Fail();
         }
         
-        [TestMethod]
+        [Test]
         public void EnumerableTest6()
         {
-            var inputArr = new double[] {15.5};
-            var result = inputArr.SumTwoMin(x => x);
-            var expectedResult = 15.5;
+            var result = _oneNumArr.SumTwoMin(x => x);
+            var expectedResult = _oneNumArr[0];
             Assert.AreEqual(expectedResult, result);
         }
     }
